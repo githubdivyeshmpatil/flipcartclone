@@ -1,7 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+
 import './Navbar.css'
+import { FcBiohazard } from "react-icons/fc";
+import { FcBusinessman } from "react-icons/fc";
+import { BsBoxSeamFill } from "react-icons/bs";
+import { IoIosGift } from "react-icons/io";
+import { GiSelfLove } from "react-icons/gi";
+import { TbGiftCard } from "react-icons/tb";
+import { FaCartArrowDown } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+
+
 
 function Navbar() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+    });
+  }, []);
   return (
     <>
     <nav className="navbar navbar-dark  fixed-top">
@@ -28,7 +46,7 @@ function Navbar() {
     >
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-          Darkcanvas
+          Flip<span id='kart'>kart</span>
         </h5>
         <button
           type="button"
@@ -39,43 +57,74 @@ function Navbar() {
       </div>
       <div className="offcanvas-body">
         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
+          <li className="nav-item"data-aos="fade-right">
+            <Link className="nav-link active" to="/" aria-current="page" href="#">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
+            <Link className="nav-link" to="about-us" href="#">
+              About
+            </Link>
           </li>
-          <li className="nav-item dropdown">
+          <li className=" dropdown">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-linkk dropdown-toggle"
               href="#"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+             Login
             </a>
-            <ul className="dropdown-menu dropdown-menu-dark">
+          
+            <ul style={{marginTop:'15px'}} className="dropdown-menu ">
               <li>
                 <a className="dropdown-item" href="#">
-                  Action
+                  New coustomer
+                </a>
+                <hr></hr>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                <FcBusinessman id='my'/> My Profile
+
+                
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Another action
+                <FcBiohazard id='my'/>  Flipkart Plus Zone
                 </a>
               </li>
               <li>
-                <hr className="dropdown-divider" />
+                <a className="dropdown-item" href="#">
+                <BsBoxSeamFill id='myy'/>  Orders
+               
+                </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#">
-                  Something else here
+               <GiSelfLove id='myy'/>  Wishlist
+                
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                <IoIosGift id='myy'/>  Rewards
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                <TbGiftCard id='myy'/>  Gift Card
+  
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                <FaCartArrowDown id='myy'/>   Cart
+
+  
                 </a>
               </li>
             </ul>

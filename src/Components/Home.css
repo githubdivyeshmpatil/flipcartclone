@@ -1,0 +1,47 @@
+#home-page-logo{
+    border: 10px solid #F6F5F0;
+    margin-top: 67px;
+    
+
+    margin-right: 35px;
+}
+/*-----logo scroollll-------------------------------*/
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .logo {
+    flex: 0 0 auto;
+    width: 80px;
+    height: auto;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-container {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .logo {
+      width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-container {
+      justify-content: flex-start;
+    }
+    
+    .logo {
+      width: 60px;
+      margin: 0 5px;
+    }
+  }
+  

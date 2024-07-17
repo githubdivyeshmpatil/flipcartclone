@@ -1,7 +1,79 @@
 .navbar{
    background-color: rgb(255, 255, 255);
-    border: 1px solid red;
+   border: 1px solid black;
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
+  #offcanvasDarkNavbarLabel{
+    color: yellow;
+    font-size: 30px;
+  }
+  #kart{
+    color: white;
+  }
+  .nav-item a{
+    color: white;
+  }
+  #login-logo{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+ 
+.nav-linkk{
+  border: 1px solid #2a55e5;
+ padding: 5px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #2a55e5;
+  color: white;
+  text-decoration: none;
+}
+.nav-linkk:hover{
+  border: 1px solid #566baf;
+  padding: 5px;
+   border-radius: 5px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-color: #2a55e5;
+   color: white;
+   text-decoration: none;
+}
+
+#my{
+  color:  #2a55e5;
+  font-size: 25px;
+   margin-top: -5px;
+}
+#myy{
+  color: orange;
+  font-size: 19px;
+}
+.dropdown-menu{
+  background-color: #ffffff;
+  color: #2a55e5;
+  
+  
+  
+  
+}
+.dropdown-menu:hover{
+  background-color: #f9f9f9;
+  color: #2a55e5;
+}
+/* Navbar.css */
+
+.navbar .dropdown-menu {
+  transition: all 0.5s ease;
+}
+
+.navbar .dropdown-menu.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar .dropdown-menu {
+  transform: translateY(-10px);
+  opacity: 0;
+}
