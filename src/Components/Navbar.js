@@ -21,14 +21,14 @@ function Navbar() {
       <span className="navbar-toggler-icon" />
     </button>
     <div
-      className="offcanvas offcanvas-end text-bg-dark"
+      className="offcanvas offcanvas-start text-bg-dark"
       tabIndex={-1}
       id="offcanvasDarkNavbar"
       aria-labelledby="offcanvasDarkNavbarLabel"
     >
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-          Dark offcanvas
+          Darkcanvas
         </h5>
         <button
           type="button"
