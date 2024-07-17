@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import AOS from 'aos';
+
 
 import './Navbar.css'
 import { FcBiohazard } from "react-icons/fc";
@@ -15,11 +15,7 @@ import { Link } from 'react-router-dom';
 
 
 function Navbar() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-    });
-  }, []);
+  
   return (
     <>
     <nav className="navbar navbar-dark  fixed-top">
