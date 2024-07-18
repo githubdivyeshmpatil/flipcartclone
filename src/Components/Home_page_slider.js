@@ -6,10 +6,12 @@ import slide3 from './assets/slide3.png'
 import slide4 from './assets/slide4.png'
 import slide5 from './assets/slide5.png'
 import slide6 from './assets/slide6.png'
+import { Container } from 'react-bootstrap'
 
 function Home_page_slider() {
   return (
     <>
+    <Container fluid>
      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div className="carousel-indicators">
         <button style={{display:'none'}}
@@ -92,7 +94,7 @@ function Home_page_slider() {
         <span className="visually-hidden">Next</span>
       </button>
     </div>
-
+    </Container>
     </>
   )
 }

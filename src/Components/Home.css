@@ -5,6 +5,10 @@
 
     margin-right: 35px;
 }
+.main-content{
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+}
 /*-----logo scroollll-------------------------------*/
 .logo-container {
     display: flex;

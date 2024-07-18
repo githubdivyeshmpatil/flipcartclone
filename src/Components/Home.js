@@ -3,6 +3,8 @@ import './Home.css'
 import Navbar from './Navbar'
 import { Container } from 'react-bootstrap'
 import Home_page_slider from './Home_page_slider';
+import Products from './Products/Products';
+import Home_category from './Home_category/Home_category';
 
 
 const logos = [
@@ -33,6 +35,12 @@ function Home() {
         </div>
       </Container>
       <Home_page_slider/>
+      <div className='main-content'>
+        <div className='layout'>
+      <Home_category/>
+      </div>
+      </div>
+      <Products headingText="Popular Product"/>
     </>
   )
 }
