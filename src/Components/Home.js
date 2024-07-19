@@ -3,6 +3,7 @@ import './Home.css'
 import Navbar from './Navbar'
 import { Container } from 'react-bootstrap'
 import Home_page_slider from './Home_page_slider';
+import Product_list_home from '../Product_list_home.js/Product_list_home';
 
 
 
@@ -34,6 +35,8 @@ function Home() {
         </div>
       </Container>
       <Home_page_slider/>
+      <Product_list_home/>
+      
      
     </>
   )

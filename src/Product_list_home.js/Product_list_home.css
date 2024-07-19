@@ -1,0 +1,95 @@
+/* Container for the product cart */
+.Product_cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+    margin: 10px;
+    
+}
+
+/* Each product item */
+.product {
+    flex: 1 1 calc(25% - 10px); /* 4 products per row */
+    box-sizing: border-box;
+    margin: 5px;
+    border: 1px solid rgb(207, 200, 200);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.product-image img {
+    width: 280px;
+    height: auto;
+    margin-left: 25px;
+    
+}
+.product-details{
+    margin: 10px;
+}
+.product-details img{
+    width: 85px;
+    margin-top: -20px;
+}
+.product-details:hover{
+    color: blue;
+
+    
+}
+#green{
+    color: green;
+    margin-left: 25px;
+}
+#greyc{
+    color: gray;
+    font-size: 15px;
+    margin-left: 25px;
+}
+.product-price{
+    font-weight: bold;
+}
+/* Media query for mobile devices */
+@media (max-width: 420px) {
+    .product {
+        flex: 1 1 calc(50% - 10px); /* 2 products per row */
+        height: 16rem;
+       
+    }
+    .product-image img{
+        width: 100%;
+        margin-left: -6px;
+        margin-top: -7px;
+    }
+    .product-details{
+        font-size: 11px;
+        margin-top: -12px;
+        
+    }
+    
+    .product-details img{
+        width: 50px;
+        margin-top: -20px;
+    }
+   
+}
+#elecronics{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    
+}
+#thumbnail-hidden {
+    overflow: hidden;
+}
+#thumbnail-hidden img{
+    transition: all 0.8s;
+}
+#thumbnail-hidden img:hover{
+    transform: scale(1.1);
+}
+.filter-home{
+    border: 1px solid black;
+  float: right;
+}

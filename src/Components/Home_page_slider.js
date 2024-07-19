@@ -11,7 +11,7 @@ import { Container } from 'react-bootstrap'
 function Home_page_slider() {
   return (
     <>
-    <Container fluid>
+    <Container fluid style={{backgroundColor:'#F6F5F0'}}>
      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div className="carousel-indicators">
         <button style={{display:'none'}}
