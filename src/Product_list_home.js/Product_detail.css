@@ -1,0 +1,79 @@
+/* Base Styles */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex: 1 1 50%; /* 50% width for 2 columns layout */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid red;
+  }
+  
+  /* Media Query for 420px */
+  @media (max-width: 420px) {
+    .item {
+      flex: 1 1 50%;
+    }
+  }
+  
+  /* Media Query for 320px */
+  @media (max-width: 320px) {
+    .item {
+      flex: 1 1 100%; /* Full width for single column layout */
+    }
+  }
+  
+  /* Base Styles */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    gap: 10px; /* Gap between buttons */
+  }
+  
+  .btn {
+    flex: 1; /* Make buttons take equal width */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Button Styling */
+  .add-to-cart {
+    background-color:orange; /* Green */
+    color: white;
+  }
+  .add-to-cart:hover{
+    background-color:orange; /* Green */
+    color: white;
+  }
+  
+  .buy-now {
+    background-color: orangered; /* Red */
+    color: white;
+  }
+  .buy-now:hover{
+    background-color: orangered; 
+    color: white;
+  }
+ 
+  /* Media Query for Smaller Screens */
+  @media (max-width: 420px) {
+    .button-container {
+      flex-direction: column; /* Stack buttons vertically */
+    }
+  
+    .btn {
+      
+      margin-bottom: 10px; /* Space between buttons */
+    }
+  
+    .btn:last-child {
+      margin-bottom: 0; /* Remove margin for the last button */
+    }
+    
+  }
+  

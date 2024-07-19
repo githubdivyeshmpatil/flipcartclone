@@ -5,6 +5,7 @@ const Product_home_data=[
           "id": 1,
           "title": "Laptop Asus 6thGn",
           "price": 32999.99,
+          "category":'Electronics',
           "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Asus%20Zenbook%20Pro%20Dual%20Screen%20Laptop/thumbnail.png"
         },
         {
@@ -15,7 +16,7 @@ const Product_home_data=[
           "total": 649.95,
           "discountPercentage": 12.84,
           "discountedTotal": 566.5,
-          "category":"Clothing",
+          "category":'Electronics',
           "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
         },
         {
@@ -26,6 +27,7 @@ const Product_home_data=[
           "total": 32999.97,
           "discountPercentage": 10.58,
           "discountedTotal": 29508.57,
+          "category":'Electronics',
           "thumbnail": "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Datejust/thumbnail.png"
         },
         {
@@ -36,6 +38,7 @@ const Product_home_data=[
           "total": 599.98,
           "discountPercentage": 10.13,
           "discountedTotal": 539.2,
+          "category":'Electronics',
           "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/Realme%20X/thumbnail.png"
         },
         
@@ -47,6 +50,7 @@ const Product_home_data=[
             "total": 599.99,
             "discountPercentage": 12.86,
             "discountedTotal": 522.83,
+            "category":'Clothing',
             "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Prada%20Women%20Bag/thumbnail.png"
           },
         {
@@ -57,6 +61,7 @@ const Product_home_data=[
             "total": 149.95,
             "discountPercentage": 8.76,
             "discountedTotal": 136.81,
+            "category":'Clothing',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
           },
         
@@ -68,6 +73,7 @@ const Product_home_data=[
             "total": 14999.98,
             "discountPercentage": 19.83,
             "discountedTotal": 12025.48,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Sportbike%20Motorcycle/thumbnail.png"
           },
           {
@@ -78,17 +84,19 @@ const Product_home_data=[
             "total": 23.97,
             "discountPercentage": 8.31,
             "discountedTotal": 21.98,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Nescafe%20Coffee/thumbnail.png"
           },
       
           {
-            "id": 15,
+            "id": 16,
             "title": "Wooden Bathroom Sink ",
             "price": 799.99,
             "quantity": 4,
             "total": 3199.96,
             "discountPercentage": 17.11,
             "discountedTotal": 2652.45,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
           },
           {
@@ -99,6 +107,7 @@ const Product_home_data=[
             "total": 35.97,
             "discountPercentage": 8.45,
             "discountedTotal": 32.93,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Wooden%20Rolling%20Pin/thumbnail.png"
           },
           {
@@ -109,6 +118,7 @@ const Product_home_data=[
             "total": 199.96,
             "discountPercentage": 8.79,
             "discountedTotal": 182.38,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Beats%20Flex%20Wireless%20Earphones/thumbnail.png"
           },
         {
@@ -119,6 +129,7 @@ const Product_home_data=[
             "total": 14.97,
             "discountPercentage": 2.75,
             "discountedTotal": 14.56,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Mulberry/thumbnail.png"
           },
           {
@@ -129,6 +140,7 @@ const Product_home_data=[
             "total": 179.99,
             "discountPercentage": 14.21,
             "discountedTotal": 154.41,
+            "category":'Clothing',
             "thumbnail": "https://cdn.dummyjson.com/products/images/womens-dresses/Marni%20Red%20&%20Black%20Suit/thumbnail.png"
           },
           {
@@ -139,6 +151,7 @@ const Product_home_data=[
             "total": 1499.97,
             "discountPercentage": 15.69,
             "discountedTotal": 1264.62,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/TV%20Studio%20Camera%20Pedestal/thumbnail.png"
           },
         {
@@ -149,6 +162,7 @@ const Product_home_data=[
             "total": 109.99,
             "discountPercentage": 17.73,
             "discountedTotal": 90.49,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Sports%20Sneakers%20Off%20White%20Red/thumbnail.png"
           },
         {
@@ -159,6 +173,7 @@ const Product_home_data=[
           "total": 13.98,
           "discountPercentage": 16.04,
           "discountedTotal": 11.74,
+          "category":'Accessories',
           "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Plate/thumbnail.png"
         },
         {
@@ -169,6 +184,7 @@ const Product_home_data=[
             "total": 19.98,
             "discountPercentage": 18.21,
             "discountedTotal": 16.34,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Black%20Whisk/thumbnail.png"
           },
           {
@@ -179,6 +195,7 @@ const Product_home_data=[
             "total": 15.96,
             "discountPercentage": 18.86,
             "discountedTotal": 12.95,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Juice/thumbnail.png"
           },
           {
@@ -189,6 +206,7 @@ const Product_home_data=[
             "total": 3199.96,
             "discountPercentage": 17.11,
             "discountedTotal": 2652.45,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
           },
           {
@@ -199,6 +217,7 @@ const Product_home_data=[
             "total": 34.99,
             "discountPercentage": 3.7,
             "discountedTotal": 33.7,
+            "category":'Clothing',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
           },
           {
@@ -207,6 +226,7 @@ const Product_home_data=[
             "price": 1.99,
             "quantity": 3,
             "total": 5.97,
+            "category":'Accessories',
             "discountPercentage": 5.99,
             "discountedTotal": 5.61,
             "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/thumbnail.png"
@@ -219,6 +239,7 @@ const Product_home_data=[
             "total": 114.94999999999999,
             "discountPercentage": 6.45,
             "discountedTotal": 107.54,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Sunglasses/thumbnail.png"
           },
           {
@@ -229,6 +250,7 @@ const Product_home_data=[
             "total": 149.95,
             "discountPercentage": 14.68,
             "discountedTotal": 127.94,
+            "category":'Accessories',
             "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/thumbnail.png"
           },
           {
@@ -239,6 +261,7 @@ const Product_home_data=[
             "total": 199.96,
             "discountPercentage": 8.08,
             "discountedTotal": 183.8,
+            "category":'Clothing',
             "thumbnail": "https://cdn.dummyjson.com/products/images/womens-bags/Blue%20Women's%20Handbag/thumbnail.png"
           },
         

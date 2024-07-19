@@ -10,7 +10,7 @@ function Product_list_home() {
   const [selectedFilter, setSelectedFilter] = useState('All');
 
   const filters = ['All', 'Electronics', 'Clothing', 'Accessories']; // Example filters
-
+ 
   const handleFilterChange = (event) => {
     const filter = event.target.value;
     setSelectedFilter(filter);
@@ -24,6 +24,7 @@ function Product_list_home() {
       const filteredItems = Product_home_data.filter((item) =>
         item.category === filter // Assuming each product has a 'category' attribute
       );
+      console.log('filteredItems', filteredItems)
       setctItem(filteredItems);
     }
   };
@@ -38,7 +39,7 @@ function Product_list_home() {
   return (
     <>
       <Container fluid style={{ backgroundColor: "#F6F5F0" }}>
-        {/* <div className="filter-home">
+        <div className="filter-home">
         <select onChange={handleFilterChange} value={selectedFilter}>
             {filters.map((filter, index) => (
               <option key={index} value={filter}>
@@ -46,7 +47,7 @@ function Product_list_home() {
               </option>
             ))}
           </select>
-        </div> */}
+        </div>
         <h1 id="elecronics">Best of Electronics</h1>
         <div className="Product_cart">
           {ctItem.map((ct) => (
