@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Product_detail.css";
 import { CiCircleQuestion } from "react-icons/ci";
@@ -8,10 +8,15 @@ import Product_list_home from "./Product_list_home";
 
 
 
-
+//scroll effect//
 function Product_detail() {
   const location = useLocation();
   const { product } = location.state;
+
+//scroll effect//
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

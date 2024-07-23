@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Product_home_data from "./Product_list_data_json";
 import { Container } from "react-bootstrap";
 import "./Product_list_home.css";
 import { useNavigate } from "react-router-dom";
 
 function Product_list_home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [ctItem, setctItem] = useState(Product_home_data);
    /* filter------use-----code------------------------------------------------*/
   const [selectedFilter, setSelectedFilter] = useState('All');
