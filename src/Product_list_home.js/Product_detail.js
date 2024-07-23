@@ -4,6 +4,7 @@ import "./Product_detail.css";
 import { CiCircleQuestion } from "react-icons/ci";
 import { FaTag } from "react-icons/fa6";
 import Navbar from "../Components/Navbar";
+import Product_list_home from "./Product_list_home";
 
 
 
@@ -14,20 +15,20 @@ function Product_detail() {
 
   return (
     <>
-     <Navbar backgroundColor="red"/>
-      <div class="container">
-        <div class="item">
+     <Navbar backgroundColor="#abdbe3" logo="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" />
+      <div className="container" id="product-detail-container">
+        <div className="item">
           <div className="item-2">
 
           <img src={product.thumbnail} alt=""></img>
           </div>
           <br></br>
-          <div class="button-container">
-            <button class="btn add-to-cart">Add to Cart</button>
-            <button class="btn buy-now">Buy Now</button>
+          <div className="button-container">
+            <button className="btn add-to-cart">Add to Cart</button>
+            <button className="btn buy-now">Buy Now</button>
           </div>
         </div>
-        <div class="item">
+        <div className="item">
           <div className="laptop">{product.title}</div>
        
             <div className="roww">
@@ -59,6 +60,8 @@ function Product_detail() {
           
         </div>
       </div>
+      {/* similar product daitels---------------------------- */}
+      <Product_list_home/>
     </>
   );
 }

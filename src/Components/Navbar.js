@@ -14,11 +14,13 @@ import { Link } from 'react-router-dom';
 
 
 
-function Navbar({ backgroundColor }) {
+function Navbar({ backgroundColor, logo }) {
   const navbarStyle = {
     backgroundColor: backgroundColor,
-    padding: '10px',
-    color: 'white'
+   
+    color: 'white',
+    
+    
   };
   
   return (
@@ -26,7 +28,7 @@ function Navbar({ backgroundColor }) {
     <nav style={navbarStyle} className="navbar navbar-dark  fixed-top">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
-     <img src='https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg' alt=''></img>
+     <img src={logo} alt=''></img>
     </a>
    
     <button
