@@ -25,9 +25,9 @@
     padding: 20px;
 }
 .product-card  img{
-    width:300px;
+    width:360px;
     height: fit-content;
-   margin-left: -5px;
+   margin-left: -14px;
 }
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
