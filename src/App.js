@@ -3,8 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
-import About from './Components/About';
+
 import Product_detail from './Product_list_home.js/Product_detail';
+import About from './Components/About';
 
 
 function App() {
@@ -17,12 +18,14 @@ function App() {
     <Route exact path='/' element={<Home/>}/>
       <Route path='/about-us' element={<About/>}/>
       <Route path='/Product_detail' element={<Product_detail/>}/>
+     
 
       
     
       
     </Routes>
     </BrowserRouter>
+    
     </>
   );
 }

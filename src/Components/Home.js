@@ -38,6 +38,7 @@ function Home() {
       <Home_page_slider/>
       <Product_list_home/>
       <Features/>
+   
       
      
     </>
