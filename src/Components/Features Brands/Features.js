@@ -10,7 +10,7 @@ function Features() {
     <Container fluid id='color-cont'>
     <h1 id="elecronics">featured Brands</h1>
        <div className="product-slider" >
-       <Link className='ff' to="Laptop-pge">
+       <Link className='ff' to="Laptop-page">
         <div className="product-card">
           <img src='https://rukminim2.flixcart.com/fk-p-flap/450/280/image/a0c2270840afce68.jpeg?q=20' alt=''></img>
         </div>

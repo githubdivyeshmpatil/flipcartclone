@@ -6,6 +6,8 @@ import Home from './Components/Home';
 
 import Product_detail from './Product_list_home.js/Product_detail';
 import About from './Components/About';
+import Laptop_page from './Components/Features Brands/Laptop_page';
+import Noice_watch from './Components/Features Brands/Noice_watch';
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
     <Route exact path='/' element={<Home/>}/>
       <Route path='/about-us' element={<About/>}/>
       <Route path='/Product_detail' element={<Product_detail/>}/>
+      <Route path='/Laptop-page' element={<Laptop_page/>}/>
+      <Route path='/noice-page' element={<Noice_watch/>}/>
+
      
 
       
