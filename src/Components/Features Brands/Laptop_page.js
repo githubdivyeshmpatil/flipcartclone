@@ -5,10 +5,18 @@ import Features_namvbar from './Features_namvbar';
 import Laptop_pagenew_data from './Laptop_page_data';
 import { Container } from 'react-bootstrap';
 import { FaStar } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 
 function Laptop_page() {
   const [laptopItem, setlaptopItem] = useState(Laptop_pagenew_data);
+
+
+  const navigate = useNavigate();
+
+    const GoToProduct = (laptopItem) =>{
+      navigate("/Laptop_Details_page" , {state : {laptopItem}})
+    }
 
    
   return (
@@ -16,8 +24,8 @@ function Laptop_page() {
      <Features_namvbar/>
     
      <div className="laptop_cart">
-          {laptopItem.map((laptopItem) => (
-            <div className="laptop-new">
+          {laptopItem.map((laptopItem ) => (
+            <div className="laptop-new"  key={laptopItem . id}  onClick={()=> GoToProduct(laptopItem)}>
               <div className="laptop-image">
                 <div id="thumbnail-hidden">
                   <img src={laptopItem.thumbnail} alt={laptopItem.title} />
