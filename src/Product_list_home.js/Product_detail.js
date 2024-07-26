@@ -8,7 +8,6 @@ import Product_list_home from "./Product_list_home";
 
 
 
-//scroll effect//
 function Product_detail() {
   const location = useLocation();
   const { product } = location.state;

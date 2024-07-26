@@ -8,6 +8,7 @@ import Product_detail from './Product_list_home.js/Product_detail';
 import About from './Components/About';
 import Laptop_page from './Components/Features Brands/Laptop_page';
 import Noice_watch from './Components/Features Brands/Noice_watch';
+import Laptop_Details_page from './Components/Features Brands/Laptop_Details_page';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
       <Route path='/Product_detail' element={<Product_detail/>}/>
       <Route path='/Laptop-page' element={<Laptop_page/>}/>
       <Route path='/noice-page' element={<Noice_watch/>}/>
+      <Route path='/Laptop_Details_page' element={<Laptop_Details_page/>}/>
+
 
      
 
