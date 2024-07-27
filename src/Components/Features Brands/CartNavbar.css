@@ -1,9 +1,9 @@
-.navbar{
-    border: 1px solid red;
-    
-}
+
 .nav-item a{
     color: yellow;
+}
+.cart-button{
+    background: none;
 }
 .d-flex{
     width: 955px;

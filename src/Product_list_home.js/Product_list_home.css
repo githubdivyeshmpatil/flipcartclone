@@ -13,10 +13,10 @@
     flex: 1 1 calc(25% - 10px); /* 4 products per row */
     box-sizing: border-box;
     margin: 5px;
-    border: 1px solid rgb(207, 200, 200);
+   
     background-color: white;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .product-image img {

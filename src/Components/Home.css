@@ -48,4 +48,86 @@
       margin: 0 5px;
     }
   }
+  /*-------------mobo--------------grid container -------image-------*/
+
+  #puma  {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
   
+  .columnnn {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .columnnn img {
+    width: 600px;
+    height: fit-content;
+    margin-bottom: 10px;
+  }
+  
+  .columnnn video {
+    width: 600px;
+    height: fit-content;
+  }
+  @media (max-width: 1024px) {
+    #puma  {
+      display: flex;
+    }
+    .columnnn img{
+      width: 100%;
+    }
+    .columnnn video{
+      width: 100%;
+     
+    }
+  }
+  @media (max-width: 769px) {
+    #puma  {
+      display: flex;
+    }
+    .columnnn img{
+      width: 100%;
+    }
+    .columnnn video{
+      width: 100%;
+     
+    }
+  }
+  
+  @media (max-width: 426px) {
+    #puma  {
+      flex-direction: column;
+    }
+    .columnnn img{
+      width: 350px;
+    }
+    .columnnn video{
+      width: 350px;
+    }
+  }
+  @media (max-width: 376px) {
+    #puma  {
+      flex-direction: column;
+    }
+    .columnnn img{
+      width: 310px;
+    }
+    .columnnn video{
+      width: 310px;
+    }
+  }
+  @media (max-width: 320px) {
+    #puma {
+      flex-direction: column;
+    }
+    .columnnn img{
+      width: 260px;
+    }
+    .columnnn video{
+      width: 260px;
+    }
+  }
