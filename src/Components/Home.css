@@ -56,6 +56,10 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    background-color:rgb(246, 245, 240);
+  }
+  .bgp{
+    background-color:rgb(246, 245, 240);
   }
   
   .columnnn {
@@ -101,6 +105,7 @@
   @media (max-width: 426px) {
     #puma  {
       flex-direction: column;
+      margin-left: -9px;
     }
     .columnnn img{
       width: 350px;

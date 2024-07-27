@@ -7,6 +7,8 @@ import Product_list_home from '../Product_list_home.js/Product_list_home';
 import Features from './Features Brands/Features';
 import leg from './assets/leg.jpg'
 import vidiosrc from './assets/vidio.mp4'
+import Footer_description from './Features Brands/Footer_page/Footer_description';
+import Footer from './Features Brands/Footer_page/Footer';
 
 
 
@@ -41,6 +43,7 @@ function Home() {
       <Home_page_slider/>
       <Product_list_home/>
       <Features/>
+      <div className='bgp'>
       <div className="container" id='puma'>
       <div className="columnnn">
         
@@ -54,6 +57,9 @@ function Home() {
        
       </div>
     </div>
+    </div>
+    <Footer_description/>
+    <Footer/>
 
    
       

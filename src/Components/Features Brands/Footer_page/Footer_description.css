@@ -1,0 +1,54 @@
+#discription{
+   
+    padding: 10px;
+  
+}
+#six{
+    color: #878787;
+}
+#commerce{
+    color: #827e7e;
+    font-size: 14px;
+    text-align: justify;
+}
+#emi{
+    color: orangered;
+    font-weight: bold;
+}
+
+/*------------media query---------------------*/
+
+@media (max-width:426px){
+    #six{
+        font-size: 13px;
+    }
+    #commerce{
+        font-size: 7px;
+    }
+}
+@media (max-width:376px){
+    #six{
+        font-size: 13px;
+    }
+    #commerce{
+        font-size: 7px;
+    }
+}
+@media (max-width:320px){
+    #six{
+        font-size: 13px;
+    }
+    #commerce{
+        font-size: 7px;
+    }
+}
+
+@media (min-width:1600px) {
+    #six{
+        font-size: 25px;
+    }
+    #commerce{
+        font-size: 25px;
+    }
+    
+}
