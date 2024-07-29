@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: 1px solid red;
+   
     background-color: black;
     color: white;
     padding: 20px;
@@ -68,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-top: 1px solid rgb(87, 87, 87);
   }
 
   .footer-box {
@@ -95,6 +96,9 @@
   @media (max-width: 1024px)  {
     .footer-box {
       flex: 1 1 calc(16.66% - 20px); /* 3 columns with space between */
+    }
+    .footer-box svg{
+      width: 60px;
     }
   }
   @media (max-width: 768px)  {
@@ -126,9 +130,12 @@
     .footer-box {
       flex: 1 1 calc(16.66% - 20px); /* 3 columns with space between */
       font-size: 8px;
+      display: none;
 
 
     }
+  
+    
     #shoppp{
         font-size: 6px;
     }

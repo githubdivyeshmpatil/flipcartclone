@@ -5,6 +5,8 @@ import { CiCircleQuestion } from "react-icons/ci";
 import { FaTag } from "react-icons/fa6";
 import Navbar from "../Components/Navbar";
 import Product_list_home from "./Product_list_home";
+import Footer_description from "../Components/Features Brands/Footer_page/Footer_description";
+import Footer from "../Components/Features Brands/Footer_page/Footer";
 
 
 
@@ -66,6 +68,8 @@ function Product_detail() {
       </div>
       {/* similar product daitels---------------------------- */}
       <Product_list_home/>
+      <Footer_description/>
+      <Footer/>
     </>
   );
 }

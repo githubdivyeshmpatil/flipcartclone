@@ -6,6 +6,8 @@ import Laptop_pagenew_data from './Laptop_page_data';
 import { Container } from 'react-bootstrap';
 import { FaStar } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import Footer_description from './Footer_page/Footer_description';
+import Footer from './Footer_page/Footer';
 
 
 function Laptop_page() {
@@ -45,6 +47,8 @@ function Laptop_page() {
             </div>
           ))}
         </div>
+        <Footer_description/>
+        <Footer/>
         
     
     </>

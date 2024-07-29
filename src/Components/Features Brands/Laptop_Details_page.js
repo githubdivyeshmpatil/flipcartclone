@@ -7,6 +7,8 @@ import { FaTag } from "react-icons/fa6";
 import CartNavbar from './CartNavbar';
 import SideCart from './SideCart';
 import { Container } from 'react-bootstrap';
+import Footer_description from './Footer_page/Footer_description';
+import Footer from './Footer_page/Footer';
 
 function Laptop_Details_page() {
   const location = useLocation();
@@ -66,6 +68,8 @@ function Laptop_Details_page() {
         </div>
       </div>
       <SideCart cartItems={cartItems} removeFromCart={removeFromCart} isVisible={isCartVisible} />
+      <Footer_description/>
+      <Footer/>
     </>
   );
 }

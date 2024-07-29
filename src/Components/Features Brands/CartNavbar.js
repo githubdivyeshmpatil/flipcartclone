@@ -8,7 +8,7 @@ const CartNavbar = ({ toggleCart }) => {
     <nav className="navbar navbar-expand-lg navbar-light ">
   <div className="container-fluid">
   <button className="cart-button" onClick={toggleCart}>
-                <FaShoppingCart  color="white" size={25}/>
+                <FaShoppingCart  color="black" size={25}/>
                
               </button>
     <button

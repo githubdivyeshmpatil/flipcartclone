@@ -1,0 +1,144 @@
+#noice-Container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin-top: 58px;
+}
+
+.sidebarrr{
+    flex: 0 0 250px;
+    background-color: white;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    border: 1px solid rgb(19, 18, 18);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    border: 1px solid red;
+}
+#noice_heading{
+    font-size: 25px;
+    font-weight: 500;
+}
+/*-----aside bar desing------------------------*/
+.dropdown {
+    width: 200px;
+}
+
+.dropdown-title {
+    font-weight: 500;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    border: 1px solid #be1b1b;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown-content input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/*-------emdia query-----------------------*/
+@media (max-width: 320px) {
+    #noice-Container {
+        flex-direction: row;
+    }
+
+    .sidebarrr {
+        position: static;
+        width: 100px;
+        height: auto;
+        border: none;
+        flex: none;
+        font-size: 8px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+    #noice_heading{
+        font-size: 15px;
+       
+    }
+   
+}
+@media (max-width: 376px) {
+    #noice-Container {
+        flex-direction: row;
+    }
+
+    .sidebarrr {
+        position: static;
+        width: 100px;
+        height: auto;
+        border: none;
+        flex: none;
+        font-size: 8px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+    #noice_heading{
+        font-size: 15px;
+       
+    }
+   
+}
+@media (max-width: 426px) {
+    #noice-Container {
+        flex-direction: row;
+    }
+
+    .sidebarrr {
+        position: static;
+        width: 100px;
+        height: auto;
+        border: none;
+        flex: none;
+        font-size: 8px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+    #noice_heading{
+        font-size: 15px;
+       
+    }
+   
+}
