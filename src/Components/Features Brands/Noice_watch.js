@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Noice_watch.css';
 import CartNavbar from './CartNavbar';
+import noice_pagejson_data from './Noise_Data';
+
 
 function Noice_watch() {
+    const [isBrandOpen, setIsBrandOpen] = useState(true);
     const [isDialShapeOpen, setIsDialShapeOpen] = useState(true);
-    const [isSizeOpen, setIsSizeOpen] = useState(false);
+    const [isSizeOpen, setIsSizeOpen] = useState(true);
+    const [isDiscountOpen, setIsDiscountOpen] = useState(true);
+
+    //watch jasonn data----//
+    const [noiseItem, setnoiseItem] = useState(noice_pagejson_data);
+
+
+    
+    const toggleBrandDropdown = () => {
+        setIsBrandOpen(!isBrandOpen);
+    };
 
     const toggleDialShapeDropdown = () => {
         setIsDialShapeOpen(!isDialShapeOpen);
@@ -13,6 +26,15 @@ function Noice_watch() {
     const toggleSizeDropdown = () => {
         setIsSizeOpen(!isSizeOpen);
     };
+    const toggleDiscountDropdown = () => {
+        setIsDiscountOpen(!isDiscountOpen);
+    };
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
 
     return (
         <>
@@ -21,7 +43,37 @@ function Noice_watch() {
                 <aside className="sidebarrr">
                     {/* Sidebar content */}
                     <p id='noice_heading'>Filters</p>
+                    
 
+                    {/* SIZE dropdown menu */}
+                    <div className="dropdown">
+                        <div className="dropdown-toggle dropdown-title" onClick={toggleBrandDropdown}>
+                            BRAND NAME
+                        </div>
+                        {isBrandOpen && (
+                            <div className="dropdown-content">
+                                <label>
+                                    <input type="checkbox" name="size" value="Small" className='box-z' /> Noise
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Medium" /> boAt
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Large" /> PTron
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> TAXTURE
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> snowbudy
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> NoiseFit
+                                </label>
+                                
+                            </div>
+                        )}
+                    </div>
                     {/* DIAL SHAPE dropdown menu */}
                     <div className="dropdown">
                         <div className="dropdown-toggle dropdown-title" onClick={toggleDialShapeDropdown}>
@@ -30,22 +82,22 @@ function Noice_watch() {
                         {isDialShapeOpen && (
                             <div className="dropdown-content">
                                 <label>
-                                    <input type="checkbox" name="shape" value="Contemporary" />Contemporary
+                                    <input type="checkbox" name="shape" value="Contemporary" />Round
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="shape" value="Curved" /> Curved
+                                    <input type="checkbox" name="shape" value="Curved" /> Square
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="shape" value="Oval" /> Oval
+                                    <input type="checkbox" name="shape" value="Oval" /> Rectangle
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="shape" value="Rectangle" /> Rectangle
+                                    <input type="checkbox" name="shape" value="Rectangle" /> Oval
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="shape" value="Round" /> Round
+                                    <input type="checkbox" name="shape" value="Round" /> Curved
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="shape" value="Square" /> Square
+                                    <input type="checkbox" name="shape" value="Square" /> Contemporary
                                 </label>
                             </div>
                         )}
@@ -54,33 +106,83 @@ function Noice_watch() {
                     {/* SIZE dropdown menu */}
                     <div className="dropdown">
                         <div className="dropdown-toggle dropdown-title" onClick={toggleSizeDropdown}>
-                            SIZE
+                            Display SIZE
                         </div>
                         {isSizeOpen && (
                             <div className="dropdown-content">
                                 <label>
-                                    <input type="checkbox" name="size" value="Small" className='box-z' /> Small
+                                    <input type="checkbox" name="size" value="Small" className='box-z' />30.49 mm 
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="size" value="Medium" /> Medium
+                                    <input type="checkbox" name="size" value="Medium" /> 30.59 mm 
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="size" value="Large" /> Large
+                                    <input type="checkbox" name="size" value="Large" /> 32.49 mm 
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> Extra Large
+                                    <input type="checkbox" name="size" value="Extra Large" /> 37.11 mm
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> Above 45
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> Bleow 30
+                                </label>
+                            </div>
+                        )}
+                    </div>
+                     {/* SIZE dropdown menu */}
+                     <div className="dropdown">
+                        <div className="dropdown-toggle dropdown-title" onClick={toggleDiscountDropdown}>
+                            DISCOUNT
+                        </div>
+                        {isDiscountOpen && (
+                            <div className="dropdown-content">
+                                <label>
+                                    <input type="checkbox" name="size" value="Small" className='box-z' /> 50%
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Medium" /> 40%
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Large" /> 20%
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="size" value="Extra Large" /> 10%
                                 </label>
                             </div>
                         )}
                     </div>
                 </aside>
+                
                 <div className="main-content">
                     {/* Main content */}
-                    <p>Content 1</p>
-                    <p>Content 2</p>
-                    <p>Content 3</p>
+                    <div className="noise_cart">
+          {noiseItem.map((noiseItem ) => (
+            <div className="noise-new"  >
+              <div className="noise-image">
+                <div id="thumbnail-hidden">
+                  <img src={noiseItem.thumbnail} alt={noiseItem.title} />
+                </div>
+               
+              </div>
+              <div className="noise-details">
+                <p className="noise-title">{noiseItem.title}</p>
+                
+                <p className="noise-prie"><span id='noise-e'>4.2 </span> <span id="greyc">
+                  421 Rating
+                 </span><span ></span></p>
+                <p className="noise-price">&#8377;{noiseItem.price}<span id="greyc">
+                  <del> &#8377;1099</del>
+                 </span>&nbsp;<span id="green">65% off</span></p>
+              </div>
+            </div>
+          ))}
+        </div>
                 </div>
             </div>
+          
+            
         </>
     );
 }

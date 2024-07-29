@@ -4,6 +4,14 @@
     height: 100vh;
     margin-top: 58px;
 }
+#noise-e{
+    background-color: green;
+    width: fit-content;
+    padding:0px 5px ;
+    border-radius: 3px;
+    color: white;
+   
+}
 
 .sidebarrr{
     flex: 0 0 250px;
@@ -11,7 +19,7 @@
     height: 100vh;
     width: 250px;
     position: fixed;
-    border: 1px solid rgb(19, 18, 18);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .main-content {
@@ -19,7 +27,7 @@
     padding: 20px;
     overflow-y: auto;
     flex-grow: 1;
-    border: 1px solid red;
+   
 }
 #noice_heading{
     font-size: 25px;
@@ -27,7 +35,8 @@
 }
 /*-----aside bar desing------------------------*/
 .dropdown {
-    width: 200px;
+    width: 250px;
+    padding: 10px;
 }
 
 .dropdown-title {
@@ -37,9 +46,10 @@
 }
 
 .dropdown-content {
-    border: 1px solid #be1b1b;
+    color: gray;
     border-radius: 5px;
     padding: 10px;
+    margin-left: -12px;
 }
 
 .dropdown-content label {
@@ -50,7 +60,37 @@
 .dropdown-content input[type="checkbox"] {
     margin-right: 10px;
 }
-
+/*----side-----menu----------*/
+/* Container for the main content */
+.main-content {
+    padding: 20px;
+  }
+  
+  /* Container for the noise cart */
+  .noise_cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap between items */
+    
+  }
+  .noise-image img{
+    width: 220px;
+  }
+  .noise-details{
+    font-size: 10px;
+  }
+  
+  /* Individual product item */
+  .noise-new {
+    flex: 1 1 calc(25% - 10px); /* 4 items per row with some gap */
+    box-sizing: border-box;
+    width: 100px;
+  
+  }
+  
+  /* Responsive design */
+  
+  
 /*-------emdia query-----------------------*/
 @media (max-width: 320px) {
     #noice-Container {
@@ -80,6 +120,36 @@
         font-size: 15px;
        
     }
+    .noise-new {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row with some gap */
+        max-width: calc(50% - 10px); /* Ensure the max-width is consistent */
+      }
+      .noise-image img{
+          width: 80px;
+        }
+        .noise-details{
+            font-size: 4px;
+        }
+        #greyc{
+            font: 2px;
+        }
+        .noise-prie{
+            
+            margin-top: -14px;
+        }
+        #noise-e{
+            background-color: green;
+            width: fit-content;
+            padding:0px 5px ;
+            border-radius: 3px;
+            color: white;
+            font-size: 5px;
+           
+        }
+        .noise-price{
+            font-size: 7px;
+            margin-top: -15px;
+        }
    
 }
 @media (max-width: 376px) {
@@ -110,6 +180,42 @@
         font-size: 15px;
        
     }
+    .noise-new {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row with some gap */
+        max-width: calc(50% - 10px); /* Ensure the max-width is consistent */
+        padding: 2px;
+      }
+      .noise-image img{
+          width: 100%;
+        }
+        .noise-details{
+            font-size: 7px;
+        }
+        #greyc{
+            font: 1px;
+        }
+        .noise-prie{
+            
+            margin-top: -14px;
+        }
+        #noise-e{
+            background-color: green;
+            width: fit-content;
+            padding:0px 5px ;
+            border-radius: 3px;
+            color: white;
+            font-size: 5px;
+           
+        }
+        .noise-price{
+            font-size: 7px;
+            margin-top: -15px;
+        }
+        #green{
+            font-size: 9px;
+            margin-left: -0px;
+        }
+       
    
 }
 @media (max-width: 426px) {
@@ -132,13 +238,171 @@
         border: none;
         padding: 10px;
     }
+    .dropdown-content{
+        margin-left: -12px;
+    }
 
     .dropdown {
-        width: 100%;
+        width: 110px;
     }
     #noice_heading{
         font-size: 15px;
        
     }
+    .noise-new {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row with some gap */
+        max-width: calc(50% - 10px); /* Ensure the max-width is consistent */
+        padding: 2px;
+      }
+      .noise-image img{
+          width: 100%;
+        }
+       
+        .noise-prie{
+            
+            margin-top: -14px;
+        }
+        #noise-e{
+            background-color: green;
+            width: fit-content;
+            padding:0px 5px ;
+            border-radius: 3px;
+            color: white;
+            font-size: 10px;
+           
+        }
+       #greyc{
+        font-size: 9px;
+       }
+       .noise-price{
+        font-size: 6px;
+        margin-top: -5px;
+       }
+       
+   
+   
+}
+@media (max-width: 768px) {
+    #noice-Container {
+        flex-direction: row;
+    }
+
+    .sidebarrr {
+        position: static;
+        width: 100px;
+        height: auto;
+        border: none;
+        flex: none;
+        font-size: 8px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+    .dropdown-content{
+        margin-left: -12px;
+    }
+
+    .dropdown {
+        width: 110px;
+    }
+    #noice_heading{
+        font-size: 15px;
+       
+    }
+    
+      .noise-image img{
+          width: 100%;
+        }
+       
+        .noise-prie{
+            
+            margin-top: -14px;
+        }
+        #noise-e{
+            background-color: green;
+            width: fit-content;
+            padding:0px 5px ;
+            border-radius: 3px;
+            color: white;
+            font-size: 10px;
+           
+        }
+       #greyc{
+        font-size: 9px;
+       }
+       .noise-price{
+        font-size: 6px;
+        margin-top: -5px;
+       }
+       
+   
+   
+}
+@media (max-width: 1024px) {
+    #noice-Container {
+        flex-direction: row;
+    }
+
+    .sidebarrr {
+        position: static;
+        width: 100px;
+        height: auto;
+        border: none;
+        flex: none;
+        font-size: 8px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+    }
+    .dropdown-content{
+        margin-left: -12px;
+    }
+
+    .dropdown {
+        width: 110px;
+    }
+    #noice_heading{
+        font-size: 15px;
+       
+    }
+    .noise-new {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row with some gap */
+        max-width: calc(50% - 10px); /* Ensure the max-width is consistent */
+        padding: 2px;
+      }
+      .noise-image img{
+          width: 100%;
+        }
+       
+        .noise-prie{
+            
+            margin-top: -14px;
+        }
+        #noise-e{
+            background-color: green;
+            width: fit-content;
+            padding:0px 5px ;
+            border-radius: 3px;
+            color: white;
+            font-size: 10px;
+           
+        }
+       #greyc{
+        font-size: 9px;
+       }
+       .noise-price{
+        font-size: 6px;
+        margin-top: -5px;
+       }
+       
+   
    
 }

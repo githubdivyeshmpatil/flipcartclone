@@ -15,6 +15,7 @@ import { CiCircleQuestion } from "react-icons/ci";
 
 
 function Footer() {
+  
   return (
     <>
     <footer className="footer">

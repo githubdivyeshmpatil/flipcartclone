@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Footer_description.css'
 
 function Footer_description() {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
        <div class="container-fluid" id='discription'>

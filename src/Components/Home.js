@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
 import Navbar from './Navbar'
 import { Container } from 'react-bootstrap'
@@ -25,6 +25,9 @@ const logos = [
     'logo9.png',
   ];
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Navbar  backgroundColor="white" logo="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"/>
