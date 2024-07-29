@@ -18,6 +18,7 @@ const noice_pagejson_data=[
       "discountPercentage": 12.84,
       "discountedTotal": 566.5,
       "category":'Electronics',
+      "brand": "Noise",
       "thumbnail": "https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/k/c/g/-original-imagteqahyctysgt.jpeg?q=70"
     },
     {

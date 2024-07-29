@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Noice_watch.css';
 import CartNavbar from './CartNavbar';
 import noice_pagejson_data from './Noise_Data';
+import { useNavigate } from 'react-router-dom';
 
 
 function Noice_watch() {
@@ -35,6 +36,12 @@ function Noice_watch() {
         window.scrollTo(0, 0);
       }, []);
     
+      const navigate = useNavigate();
+
+      const GoToProduct = (noiseItem) =>{
+        navigate("/Noise_Deatail_page" , {state : {noiseItem}})
+      }
+
 
     return (
         <>
@@ -154,12 +161,11 @@ function Noice_watch() {
                         )}
                     </div>
                 </aside>
-                
                 <div className="main-content">
                     {/* Main content */}
                     <div className="noise_cart">
           {noiseItem.map((noiseItem ) => (
-            <div className="noise-new"  >
+            <div className="noise-new"  key={noiseItem . id}  onClick={()=> GoToProduct(noiseItem)} >
               <div className="noise-image">
                 <div id="thumbnail-hidden">
                   <img src={noiseItem.thumbnail} alt={noiseItem.title} />
@@ -181,8 +187,7 @@ function Noice_watch() {
         </div>
                 </div>
             </div>
-          
-            
+           
         </>
     );
 }

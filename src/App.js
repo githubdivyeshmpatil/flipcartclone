@@ -9,6 +9,7 @@ import About from './Components/About';
 import Laptop_page from './Components/Features Brands/Laptop_page';
 import Noice_watch from './Components/Features Brands/Noice_watch';
 import Laptop_Details_page from './Components/Features Brands/Laptop_Details_page';
+import Noise_Deatail_page from './Components/Features Brands/Noise_Deatail_page';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
       <Route path='/Laptop-page' element={<Laptop_page/>}/>
       <Route path='/noice-page' element={<Noice_watch/>}/>
       <Route path='/Laptop_Details_page' element={<Laptop_Details_page/>}/>
+      <Route path='/Noise_Deatail_page' element={<Noise_Deatail_page/>}/>
+
+
 
 
      
