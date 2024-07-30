@@ -10,6 +10,7 @@ import Laptop_page from './Components/Features Brands/Laptop_page';
 import Noice_watch from './Components/Features Brands/Noice_watch';
 import Laptop_Details_page from './Components/Features Brands/Laptop_Details_page';
 import Noise_Deatail_page from './Components/Features Brands/Noise_Deatail_page';
+import Wild_Stone from './Components/Features Brands/Wild_Stone';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Route path='/noice-page' element={<Noice_watch/>}/>
       <Route path='/Laptop_Details_page' element={<Laptop_Details_page/>}/>
       <Route path='/Noise_Deatail_page' element={<Noise_Deatail_page/>}/>
+      <Route path='/Wild_Stone' element={<Wild_Stone/>}/>
 
 
 

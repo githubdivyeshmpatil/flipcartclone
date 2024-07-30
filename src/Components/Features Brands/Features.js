@@ -20,9 +20,11 @@ function Features() {
           <img src='https://rukminim2.flixcart.com/fk-p-flap/450/280/image/0998bf64c7431be1.jpeg?q=20' alt=''></img>
         </div>
         </Link>
+        <Link className='ghh' to="wild_stone">
         <div className="product-card">
           <img src='https://rukminim2.flixcart.com/fk-p-flap/450/280/image/59e7a5a085eec792.jpeg?q=20' alt=''></img>
         </div>
+        </Link>
         <div className="product-card">
           <img src='https://rukminim2.flixcart.com/fk-p-flap/450/280/image/e217caf579ff539e.jpeg?q=20' alt=''></img>
         </div>

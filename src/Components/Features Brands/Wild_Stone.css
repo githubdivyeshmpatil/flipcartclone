@@ -1,0 +1,144 @@
+.producti-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center products horizontally */
+  gap: 20px;
+  border: 1px solid #030303; /* Optional: Add border for better visibility */
+  margin-top: 72px;
+}
+
+.producti {
+  position: relative; /* Needed for absolute positioning of hover effect */
+  padding: 10px;
+  border: 1px solid #030303; /* Optional: Add border for better visibility */
+  cursor: pointer;
+}
+
+.producti img {
+  width: 310px;
+  height: 310px;
+  transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.color-options {
+  margin-top: 8px;
+  display: flex; /* Align images horizontally */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  gap: 8px; /* Space between color option images */
+}
+
+.color-options img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  cursor: pointer;
+  border: 2px solid transparent; /* Highlight border for selected color */
+  transition: border-color 0.3s ease; /* Smooth transition effect */
+}
+
+.color-options img.selected {
+  border-color: #000; /* Highlight selected color */
+}
+
+/* Hover effect */
+.color-options img:hover {
+  opacity: 0.8; /* Slightly change opacity on hover */
+}
+
+.product-title-name {
+  font-size: 20px;
+  color: gray;
+  text-align: start;
+}
+
+.product-title-name_solid {
+  color: black;
+  margin-top: -22px;
+}
+
+#delete {
+  color: gray;
+}
+
+.boys-price {
+  font-weight: 600;
+  margin-top: -15px;
+}
+
+#off {
+  color: green;
+}
+
+.free {
+  color: rgb(217, 38, 83);
+}
+
+.sizes {
+  color: grey;
+  margin-top: -20px;
+}
+
+#allsize {
+  color: black;
+}
+
+@media (max-width: 320px) {
+  .producti {
+    flex: 1 1 calc(50% - 20px); /* 2 products per row minus gap */
+    max-width: calc(50% - 20px); /* Ensure max-width is also set */
+  }
+
+  .producti img {
+    width: 100%; /* Adjust image width to fit container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .color-options img{
+    width: 22px;
+  }
+  .product-title-name{
+    font-size: 10px;
+  }
+  .product-title-name_solid{
+    font-size: 10px;
+   
+  }
+  .boys-price{
+    font-size: 12px;
+  }
+  .free{
+    font-size: 10px;
+  }
+  .sizes{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 426px) {
+  .producti {
+    flex: 1 1 calc(50% - 20px); /* 2 products per row minus gap */
+    max-width: calc(50% - 20px); /* Ensure max-width is also set */
+  }
+
+  .producti img {
+    width: 100%; /* Adjust image width to fit container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .color-options img{
+    width: 22px;
+  }
+  .product-title-name{
+    font-size: 10px;
+  }
+  .product-title-name_solid{
+    font-size: 10px;
+   
+  }
+  .boys-price{
+    font-size: 12px;
+  }
+  .free{
+    font-size: 10px;
+  }
+  .sizes{
+    font-size: 10px;
+  }
+}
