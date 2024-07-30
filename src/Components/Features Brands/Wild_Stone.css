@@ -81,10 +81,7 @@
 }
 
 @media (max-width: 320px) {
-  .producti {
-    flex: 1 1 calc(50% - 20px); /* 2 products per row minus gap */
-    max-width: calc(50% - 20px); /* Ensure max-width is also set */
-  }
+ 
 
   .producti img {
     width: 100%; /* Adjust image width to fit container */
@@ -94,20 +91,20 @@
     width: 22px;
   }
   .product-title-name{
-    font-size: 10px;
+    font-size: 7px;
   }
   .product-title-name_solid{
-    font-size: 10px;
+    font-size: 7px;
    
   }
   .boys-price{
-    font-size: 12px;
+    font-size: 7px;
   }
   .free{
-    font-size: 10px;
+    font-size: 7px;
   }
   .sizes{
-    font-size: 10px;
+    font-size: 7px;
   }
 }
 
@@ -122,19 +119,19 @@
     width: 22px;
   }
   .product-title-name{
-    font-size: 10px;
+    font-size: 14px;
   }
   .product-title-name_solid{
-    font-size: 10px;
+    font-size: 14px;
    
   }
   .boys-price{
-    font-size: 12px;
+    font-size: 15px;
   }
   .free{
-    font-size: 10px;
+    font-size: 12px;
   }
   .sizes{
-    font-size: 10px;
+    font-size: 15px;
   }
 }
