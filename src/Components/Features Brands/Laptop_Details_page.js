@@ -14,16 +14,20 @@ function Laptop_Details_page() {
   const location = useLocation();
   const { laptopItem } = location.state || {};
   const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
   const [isCartVisible, setIsCartVisible] = useState(false);
 
   const addToCart = () => {
     setCartItems([...cartItems, laptopItem]);
+    setCartCount(cartCount + 1); // Increment cart count
   };
-
   const removeFromCart = (index) => {
     const newCartItems = cartItems.filter((item, i) => i !== index);
     setCartItems(newCartItems);
+    setCartCount(cartCount - 1); // Decrement cart count
   };
+
+  
 
   const toggleCartVisibility = () => {
     setIsCartVisible(!isCartVisible);
@@ -31,7 +35,7 @@ function Laptop_Details_page() {
 
   return (
     <>
-      <CartNavbar toggleCart={toggleCartVisibility} />
+      <CartNavbar toggleCart={toggleCartVisibility} cartCount={cartCount}/>
       <div className="container" id="product-detail-container">
         <div className="item">
           <div className="item-2">

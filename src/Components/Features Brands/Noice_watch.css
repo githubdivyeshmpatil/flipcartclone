@@ -12,7 +12,10 @@
     color: white;
    
 }
-
+#smart-watch{
+    font-size: 18px;
+    color: rgb(53, 50, 50);
+}
 .sidebarrr{
     flex: 0 0 250px;
     background-color: white;

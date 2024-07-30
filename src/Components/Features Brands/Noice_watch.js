@@ -4,83 +4,108 @@ import CartNavbar from './CartNavbar';
 import noice_pagejson_data from './Noise_Data';
 import { useNavigate } from 'react-router-dom';
 
-
 function Noice_watch() {
     const [isBrandOpen, setIsBrandOpen] = useState(true);
     const [isDialShapeOpen, setIsDialShapeOpen] = useState(true);
     const [isSizeOpen, setIsSizeOpen] = useState(true);
     const [isDiscountOpen, setIsDiscountOpen] = useState(true);
 
-    //watch jasonn data----//
-    const [noiseItem, setnoiseItem] = useState(noice_pagejson_data);
+    const [noiseItem, setNoiseItem] = useState(noice_pagejson_data);
+    const [filteredNoiseItem, setFilteredNoiseItem] = useState(noice_pagejson_data);
 
+    const [brandFilters, setBrandFilters] = useState([]);
+    const [shapeFilters, setShapeFilters] = useState([]);
+    const [discountFilters, setDiscountFilters] = useState([]);
 
-    
-    const toggleBrandDropdown = () => {
-        setIsBrandOpen(!isBrandOpen);
+    const toggleBrandDropdown = () => setIsBrandOpen(!isBrandOpen);
+    const toggleDialShapeDropdown = () => setIsDialShapeOpen(!isDialShapeOpen);
+    const toggleSizeDropdown = () => setIsSizeOpen(!isSizeOpen);
+    const toggleDiscountDropdown = () => setIsDiscountOpen(!isDiscountOpen);
+
+    const handleFilterChange = (filterType, value) => {
+        const updateFilters = (filters) => {
+            return filters.includes(value)
+                ? filters.filter((item) => item !== value)
+                : [...filters, value];
+        };
+
+        switch (filterType) {
+            case 'brand':
+                setBrandFilters(updateFilters(brandFilters));
+                break;
+            case 'shape':
+                setShapeFilters(updateFilters(shapeFilters));
+                break;
+            case 'discount':
+                setDiscountFilters(updateFilters(discountFilters));
+                break;
+            default:
+                break;
+        }
     };
 
-    const toggleDialShapeDropdown = () => {
-        setIsDialShapeOpen(!isDialShapeOpen);
-    };
+    useEffect(() => {
+        const applyFilters = () => {
+            let filtered = noiseItem;
 
-    const toggleSizeDropdown = () => {
-        setIsSizeOpen(!isSizeOpen);
-    };
-    const toggleDiscountDropdown = () => {
-        setIsDiscountOpen(!isDiscountOpen);
-    };
+            if (brandFilters.length > 0) {
+                filtered = filtered.filter((item) => brandFilters.includes(item.brand));
+            }
 
+            if (shapeFilters.length > 0) {
+                filtered = filtered.filter((item) => shapeFilters.includes(item.shape));
+            }
+
+            if (discountFilters.length > 0) {
+                filtered = filtered.filter((item) => discountFilters.includes(item.discount));
+            }
+
+            setFilteredNoiseItem(filtered);
+        };
+
+        applyFilters();
+    }, [brandFilters, shapeFilters, discountFilters, noiseItem]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-    
-      const navigate = useNavigate();
+    }, []);
 
-      const GoToProduct = (noiseItem) =>{
-        navigate("/Noise_Deatail_page" , {state : {noiseItem}})
-      }
+    const navigate = useNavigate();
 
+    const GoToProduct = (noiseItem) => {
+        navigate("/Noise_Deatail_page", { state: { noiseItem } });
+    };
 
     return (
         <>
-            <CartNavbar/>
+            <CartNavbar />
             <div className="container-fluid" id='noice-Container'>
+            
                 <aside className="sidebarrr">
-                    {/* Sidebar content */}
                     <p id='noice_heading'>Filters</p>
-                    
 
-                    {/* SIZE dropdown menu */}
+                    {/* BRAND dropdown menu */}
                     <div className="dropdown">
                         <div className="dropdown-toggle dropdown-title" onClick={toggleBrandDropdown}>
                             BRAND NAME
                         </div>
                         {isBrandOpen && (
                             <div className="dropdown-content">
-                                <label>
-                                    <input type="checkbox" name="size" value="Small" className='box-z' /> Noise
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Medium" /> boAt
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Large" /> PTron
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> TAXTURE
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> snowbudy
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> NoiseFit
-                                </label>
-                                
+                                {['Noise', 'boAt', 'PTron', 'TAXTURE', 'snowbudy', 'NoiseFit'].map((brand) => (
+                                    <label key={brand}>
+                                        <input
+                                            type="checkbox"
+                                            name="brand"
+                                            value={brand}
+                                            onChange={() => handleFilterChange('brand', brand)}
+                                        />
+                                        {brand}
+                                    </label>
+                                ))}
                             </div>
                         )}
                     </div>
+
                     {/* DIAL SHAPE dropdown menu */}
                     <div className="dropdown">
                         <div className="dropdown-toggle dropdown-title" onClick={toggleDialShapeDropdown}>
@@ -88,106 +113,74 @@ function Noice_watch() {
                         </div>
                         {isDialShapeOpen && (
                             <div className="dropdown-content">
-                                <label>
-                                    <input type="checkbox" name="shape" value="Contemporary" />Round
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="shape" value="Curved" /> Square
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="shape" value="Oval" /> Rectangle
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="shape" value="Rectangle" /> Oval
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="shape" value="Round" /> Curved
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="shape" value="Square" /> Contemporary
-                                </label>
+                                {['Round', 'Square', 'Rectangle', 'Oval', 'Curved', 'Contemporary'].map((shape) => (
+                                    <label key={shape}>
+                                        <input
+                                            type="checkbox"
+                                            name="shape"
+                                            value={shape}
+                                            onChange={() => handleFilterChange('shape', shape)}
+                                        />
+                                        {shape}
+                                    </label>
+                                ))}
                             </div>
                         )}
                     </div>
 
-                    {/* SIZE dropdown menu */}
+                    {/* DISCOUNT dropdown menu */}
                     <div className="dropdown">
-                        <div className="dropdown-toggle dropdown-title" onClick={toggleSizeDropdown}>
-                            Display SIZE
-                        </div>
-                        {isSizeOpen && (
-                            <div className="dropdown-content">
-                                <label>
-                                    <input type="checkbox" name="size" value="Small" className='box-z' />30.49 mm 
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Medium" /> 30.59 mm 
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Large" /> 32.49 mm 
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> 37.11 mm
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> Above 45
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> Bleow 30
-                                </label>
-                            </div>
-                        )}
-                    </div>
-                     {/* SIZE dropdown menu */}
-                     <div className="dropdown">
                         <div className="dropdown-toggle dropdown-title" onClick={toggleDiscountDropdown}>
                             DISCOUNT
                         </div>
                         {isDiscountOpen && (
                             <div className="dropdown-content">
-                                <label>
-                                    <input type="checkbox" name="size" value="Small" className='box-z' /> 50%
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Medium" /> 40%
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Large" /> 20%
-                                </label>
-                                <label>
-                                    <input type="checkbox" name="size" value="Extra Large" /> 10%
-                                </label>
+                                {['50%', '40%', '20%', '10%'].map((discount) => (
+                                    <label key={discount}>
+                                        <input
+                                            type="checkbox"
+                                            name="discount"
+                                            value={discount}
+                                            onChange={() => handleFilterChange('discount', discount)}
+                                        />
+                                        {discount}
+                                    </label>
+                                ))}
                             </div>
                         )}
                     </div>
+
+                    {/* Other dropdown menus can be added similarly */}
                 </aside>
                 <div className="main-content">
-                    {/* Main content */}
+                    <h1 id='smart-watch'>Smart Watches</h1>
                     <div className="noise_cart">
-          {noiseItem.map((noiseItem ) => (
-            <div className="noise-new"  key={noiseItem . id}  onClick={()=> GoToProduct(noiseItem)} >
-              <div className="noise-image">
-                <div id="thumbnail-hidden">
-                  <img src={noiseItem.thumbnail} alt={noiseItem.title} />
+                        {filteredNoiseItem.map((noiseItem) => (
+                            <div className="noise-new" key={noiseItem.id} onClick={() => GoToProduct(noiseItem)}>
+                                <div className="noise-image">
+                                    <div id="thumbnail-hidden">
+                                        <img src={noiseItem.thumbnail} alt={noiseItem.title} />
+                                    </div>
+                                </div>
+                                <div className="noise-details">
+                                    <p className="noise-title">{noiseItem.title}</p>
+                                    <p className="noise-prie">
+                                        <span id='noise-e'>4.2 </span>
+                                        <span id="greyc">421 Rating</span>
+                                    </p>
+                                    <p className="noise-price">
+                                        &#8377;{noiseItem.price}
+                                        <span id="greyc">
+                                            <del>&#8377;1099</del>
+                                        </span>
+                                        &nbsp;<span id="green">65% off</span>
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-               
-              </div>
-              <div className="noise-details">
-                <p className="noise-title">{noiseItem.title}</p>
-                
-                <p className="noise-prie"><span id='noise-e'>4.2 </span> <span id="greyc">
-                  421 Rating
-                 </span><span ></span></p>
-                <p className="noise-price">&#8377;{noiseItem.price}<span id="greyc">
-                  <del> &#8377;1099</del>
-                 </span>&nbsp;<span id="green">65% off</span></p>
-              </div>
             </div>
-          ))}
-        </div>
-                </div>
-            </div>
-           
         </>
     );
 }

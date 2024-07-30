@@ -47,4 +47,33 @@
     padding: 5px 10px;
     cursor: pointer;
   }
-  
+  @media(max-width:320px){
+    .side-cart{
+      width: 300px;
+      font-size: 10px;
+    }
+    .side-cart img{
+      width: 50px;
+    }
+  }
+  @media(max-width:376px){
+    .side-cart{
+      width: 340px;
+      font-size: 10px;
+    }
+    .side-cart img{
+      width: 50px;
+    }
+  }
+  @media(max-width:425px){
+    .side-cart{
+      width: 370px;
+      font-size: 10px;
+    }
+    .side-cart img{
+      width: 50px;
+    }
+    .form-control{
+      display: none;
+    }
+  }
