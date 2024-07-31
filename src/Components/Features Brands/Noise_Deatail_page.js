@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CiCircleQuestion } from "react-icons/ci";
 import { FaTag } from "react-icons/fa6";
-import CartNavbar from './CartNavbar';
+
 import SideCart from './SideCart';
 import Footer_description from './Footer_page/Footer_description';
 import Footer from './Footer_page/Footer';
+import Features_namvbar from './Features_namvbar';
 
 function Noise_Deatail_page() {
 
@@ -33,7 +34,7 @@ function Noise_Deatail_page() {
   
   return (
     <>
-      <CartNavbar toggleCart={toggleCartVisibility} cartCount={cartCount} />
+      <Features_namvbar toggleCart={toggleCartVisibility} cartCount={cartCount} />
       <div className="container" id="product-detail-container">
         <div className="item">
           <div className="item-2">

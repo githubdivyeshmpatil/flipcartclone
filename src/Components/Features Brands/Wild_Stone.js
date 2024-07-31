@@ -1,9 +1,9 @@
 import './Wild_Stone.css';
 import React, { useEffect, useState } from 'react';
 import boysdata from './Wild_data_jason';
-import CartNavbar from './CartNavbar';
 import Footer_description from './Footer_page/Footer_description';
 import Footer from './Footer_page/Footer';
+import Features_namvbar from './Features_namvbar';
 
 function Wild_Stone() {
   const [selectedColors, setSelectedColors] = useState(
@@ -26,7 +26,7 @@ useEffect(() => {
 
   return (
     <>
-    <CartNavbar/>
+    <Features_namvbar/>
       <div className="producti-gallery">
         {boysdata.map(producti => (
           <div key={producti.id} className="producti">

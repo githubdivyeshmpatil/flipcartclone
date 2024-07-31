@@ -67,7 +67,7 @@
   }
   @media(max-width:425px){
     .side-cart{
-      width: 370px;
+      width: 300px;
       font-size: 10px;
     }
     .side-cart img{

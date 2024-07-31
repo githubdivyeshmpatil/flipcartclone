@@ -1,14 +1,12 @@
-// Laptop_Details_page.js
 import React, { useState } from 'react';
-import './Laptop_Details_page.css';
 import { useLocation } from 'react-router-dom';
+import './Laptop_Details_page.css';
 import { CiCircleQuestion } from "react-icons/ci";
 import { FaTag } from "react-icons/fa6";
-import CartNavbar from './CartNavbar';
 import SideCart from './SideCart';
-import { Container } from 'react-bootstrap';
 import Footer_description from './Footer_page/Footer_description';
 import Footer from './Footer_page/Footer';
+import Features_namvbar from './Features_namvbar';
 
 function Laptop_Details_page() {
   const location = useLocation();
@@ -27,15 +25,13 @@ function Laptop_Details_page() {
     setCartCount(cartCount - 1); // Decrement cart count
   };
 
-  
-
   const toggleCartVisibility = () => {
     setIsCartVisible(!isCartVisible);
   };
 
   return (
     <>
-      <CartNavbar toggleCart={toggleCartVisibility} cartCount={cartCount}/>
+      <Features_namvbar toggleCart={toggleCartVisibility} cartCount={cartCount} />
       <div className="container" id="product-detail-container">
         <div className="item">
           <div className="item-2">
@@ -55,16 +51,16 @@ function Laptop_Details_page() {
           </div>
           <div id="boldd">&#8377;{laptopItem.price}
             <span id="gre"><del> &#8377;1099</del></span>
-            <span id="grn">15% off</span><CiCircleQuestion id="ques"/>
+            <span id="grn">15% off</span><CiCircleQuestion id="ques" />
           </div>
           <div className="new">
             <h1 id="Available">Available offers</h1>
           </div>
           <div className="tagg">
-            <span className="tag"><FaTag color="green"/><span id="black"> Bank Offer</span>10% off up to ₹1,000 on Axis Bank Credit Card and Credit EMI Txns, on  ₹9,999 and above<span id="bluee">T&C</span></span><br></br>
-            <span className="tag"><FaTag color="green"/><span id="black"> Bank Offer</span>5% Cashback on Flipkart Axis Bank Card<span id="bluee">T&C</span></span><br></br>
-            <span className="tag"><FaTag color="green"/> Special Offer on Boat charger on Purchase of This product<span id="bluee">T&C</span></span><br></br>
-            <span className="tag"><FaTag color="green"/> <span id="black">Partner Offer</span>Sign-up for Flipkart Pay Later & get free Times Prime Benefits worth ₹20,000*<span id="bluee">Know More</span></span>
+            <span className="tag"><FaTag color="green" /><span id="black"> Bank Offer</span>10% off up to ₹1,000 on Axis Bank Credit Card and Credit EMI Txns, on ₹9,999 and above<span id="bluee">T&C</span></span><br></br>
+            <span className="tag"><FaTag color="green" /><span id="black"> Bank Offer</span>5% Cashback on Flipkart Axis Bank Card<span id="bluee">T&C</span></span><br></br>
+            <span className="tag"><FaTag color="green" /> Special Offer on Boat charger on Purchase of This product<span id="bluee">T&C</span></span><br></br>
+            <span className="tag"><FaTag color="green" /><span id="black">Partner Offer</span>Sign-up for Flipkart Pay Later & get free Times Prime Benefits worth ₹20,000*<span id="bluee">Know More</span></span>
           </div>
           <div className="super">
             <img src="https://i.ytimg.com/vi/wX9lEPW40j4/maxresdefault.jpg" alt=""></img>
@@ -72,8 +68,8 @@ function Laptop_Details_page() {
         </div>
       </div>
       <SideCart cartItems={cartItems} removeFromCart={removeFromCart} isVisible={isCartVisible} />
-      <Footer_description/>
-      <Footer/>
+      <Footer_description />
+      <Footer />
     </>
   );
 }

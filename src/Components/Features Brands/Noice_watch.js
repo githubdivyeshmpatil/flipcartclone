@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Noice_watch.css';
-import CartNavbar from './CartNavbar';
 import noice_pagejson_data from './Noise_Data';
 import { useNavigate } from 'react-router-dom';
+import Features_namvbar from './Features_namvbar';
 
 function Noice_watch() {
     const [isBrandOpen, setIsBrandOpen] = useState(true);
@@ -78,7 +78,7 @@ function Noice_watch() {
 
     return (
         <>
-            <CartNavbar />
+            <Features_namvbar />
             <div className="container-fluid" id='noice-Container'>
             
                 <aside className="sidebarrr">
