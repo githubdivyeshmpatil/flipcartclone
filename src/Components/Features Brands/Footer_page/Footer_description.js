@@ -7,7 +7,7 @@ function Footer_description() {
   }, []);
   return (
     <>
-       <div class="container-fluid" id='discription'>
+       <div className="container-fluid" id='discription'>
        <div className='deon'>
        <h6 id='six'>Flipkart: The One-stop Shopping Destination</h6>
        <p id='commerce'>E-commerce is revolutionizing the way we all shop in India. Why do you want than hum nie store it another it search of the latest phone when you can find it un

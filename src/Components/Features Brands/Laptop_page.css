@@ -6,7 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 90px  ;
+    margin-top: 40px  ;
    
     
 }
@@ -73,7 +73,7 @@
     .laptop-new{
         flex: 1 1 calc(50% - 10px); /* 2 products per row */
         height: 16rem;
-        margin-top: 65px;
+       
        
     }
     .laptop-image img{
@@ -110,7 +110,7 @@
     .laptop-new{
         flex: 1 1 calc(50% - 10px); /* 2 products per row */
         height: 16rem;
-        margin-top: 65px;
+      
        
     }
     .laptop-image img{

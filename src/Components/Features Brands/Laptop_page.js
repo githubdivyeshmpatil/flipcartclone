@@ -10,6 +10,7 @@ import Footer_description from './Footer_page/Footer_description';
 import Footer from './Footer_page/Footer';
 
 
+
 function Laptop_page() {
   const [laptopItem, setlaptopItem] = useState(Laptop_pagenew_data);
 
